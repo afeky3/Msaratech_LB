@@ -83,15 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     // Pause on hover
-    slider.addEventListener('mouseenter', pauseAutoSlide);
-    slider.addEventListener('mouseleave', startAutoSlide);
+    slider.onmouseenter = pauseAutoSlide;
+    slider.onmouseleave = startAutoSlide;
 
     // Button events
     nextBtn.addEventListener('click', () => {
+        clearInterval(autoSlideInterval);
         nextSlide();
     });
 
     prevBtn.addEventListener('click', () => {
+        clearInterval(autoSlideInterval);
         prevSlide();
     });
 
