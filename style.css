@@ -176,10 +176,11 @@ body {
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
 }
 
 .slide {
+    /* padding-top: 50px; */
     background-color: #f9fad8;
     position: absolute;
     width: 100%;
@@ -492,7 +493,7 @@ body {
 
 /* Partners Section */
 .partners-section {
-  margin-top: 30px;
+    margin-top: 30px;
     padding: 20px 0;
     background-color: #0d2027;
     text-align: center;
