@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
             dots[index].classList.toggle('active', index === slideIndex);
         });
         currentSlide = slideIndex;
-        resetAutoSlide();
     }
 
     // Next slide function
@@ -88,12 +87,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Button events
     nextBtn.addEventListener('click', () => {
-        clearInterval(autoSlideInterval);
         nextSlide();
     });
 
     prevBtn.addEventListener('click', () => {
-        clearInterval(autoSlideInterval);
         prevSlide();
     });
 

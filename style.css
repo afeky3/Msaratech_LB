@@ -487,6 +487,7 @@ body {
 
 /* Partners Section */
 .partners-section {
+  margin-top: 30px;
     padding: 20px 0;
     background-color: #0d2027;
     text-align: center;
