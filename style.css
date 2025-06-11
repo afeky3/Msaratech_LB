@@ -741,6 +741,7 @@ h2.section-title-lol {
 }
 
 .form-wrapper {
+    height: 400px;
     background: rgba(249, 250, 216, 0.1);
     padding: 15px;
     border-radius: 8px;
