@@ -467,6 +467,9 @@ body {
     .slider-controls {
         bottom: 20px;
     }
+    .hero-slider{
+      height: 1750px;
+    }
 }
 
 

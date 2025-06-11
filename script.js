@@ -2,11 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const loginBtn = document.querySelector('.login-button');
-    const slides = document.querySelector(".hero-slider");
-    
-    if (window.innerWidth < 780){
-      slides.style.height = "1750px";
-    }
 
     hamburger.addEventListener('click', function() {
         navMenu.classList.toggle('active');
