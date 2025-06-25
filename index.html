@@ -3,39 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Msaratech - مساراتك</title>
+    <title>Msaratech - Lead the Future of Medicine</title>
     
-    <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Your CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Favicon -->
     <link rel="icon" href="msaratech_icon.png" type="image/png">
-
-    <!-- Your JS -->
-    <script src="script.js"></script>
 </head>
 <body>
     <div id="top"></div>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="logo_h.png" alt="Main Logo" class="desktop-logo">
-                <img src="logo_h.png" alt="Mobile Logo" class="mobile-logo">
+                <a href="#top"><img src="logo_h.png" alt="Msaratech Logo" class="desktop-logo"></a>
+                <a href="#top"><img src="logo_h.png" alt="Msaratech Mobile Logo" class="mobile-logo"></a>
             </div>
             
             <div class="nav-menu">
                 <a href="#top" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="programs.html" class="nav-link">Courses</a>
+                <a href="#curriculum" class="nav-link">Curriculum</a>
                 <a href="#contact" class="nav-link">Contact Us</a>
             </div>
             
-            <div class="login-btn">
+            <div class="nav-buttons">
                 <button class="login-button">Login</button>
+                <button class="signup-button">Sign Up</button>
             </div>
             
             <div class="hamburger">
@@ -45,204 +40,155 @@
     </header>
 
     <div class="hero-slider">
-        <!-- Slide 1: Image Left / Content Right -->
         <div class="slide slide-1 active">
             <div class="slide-content">
                 <div class="image-container">
-                    <img src="hero_doctors.png" alt="Slide 1">
+                    <img src="hero_doctors.png" alt="Medical Professionals using Technology">
                 </div>
                 <div class="text-content">
-                    <h2>The first educational platform specialized in medical technologies</h2>
+                    <h2>Don't Just Graduate. Become a Leader in AI-Powered Healthcare.</h2>
                     <p>
-                        Msaratech is Egypt’s first educational platform dedicated to equipping medical students with cutting-edge AI, data analytics, and automation skills. Through hybrid learning—blending expert-led courses, hands-on projects, and AI mentorship—we bridge the gap between medicine and technology, empowering the next generation of digitally fluent healthcare professionals.                    </p>
-                    <button class="cta-button">Know More</button>
+                        Your traditional curriculum is missing a key piece. Msaratech is Egypt's first platform empowering medical students with the critical AI, data, and automation skills to gain a real career advantage.
+                    </p>
+                    <a href="#curriculum" class="cta-button">Explore Our Courses</a>
                 </div>
             </div>
         </div>
-
-        <!-- Slide 2: Full Background with Cards -->
         <div class="slide slide-2">
             <div class="slide-background">
-                <img src="hero_s2.jpg" alt="Slide 2 Background">
+                <img src="hero_s2.jpg" alt="Digital Health Background">
             </div>
             <div class="slide-content centered">
-                <h2>Our Courses Covers</h2>
+                <h2>Our Courses Cover</h2>
                 <div class="services-cards">
-                    <div class="card">
-                        <i class="fas fa-robot" title="AI"></i>
-                        <h3>AI for Daily Medical Tasks</h3>
-                        <p>Master AI tools to automate patient records, scheduling, and diagnostics—saving hours for critical care.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-chart-line" title="Data Analysis"></i>                        
-                        <h3>Medical Data Analysis</h3>
-                        <p>Turn clinical data into insights with Python, R, Excel, and BI tools tailored for healthcare research.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-brain" title="Machine Learning"></i>                        
-                        <h3>Medical Machine & Deep Learning</h3>
-                        <p>Build AI models for disease prediction, imaging analysis, and personalized treatment plans.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-stethoscope"></i> <!-- Updated icon -->
-                        <h3>Advanced AI Diagnostics</h3>
-                        <p>Leverage cutting-edge AI to interpret lab results, scans, and genomic data with precision.</p>
-                    </div>
-                    <div class="card">
-                        <i class="fas fa-laptop-medical" title="Medical Technology"></i>                        
-                        <h3>Medical Tools & Technologies</h3>
-                        <p>Hands-on training for modern and systems, and technologies used in medical fields.</p>
-                    </div>
+                    <div class="card"><i class="fas fa-robot"></i><h3>AI for Daily Medical Tasks</h3><p>Automate records, scheduling, and diagnostics.</p></div>
+                    <div class="card"><i class="fas fa-chart-line"></i><h3>Medical Data Analysis</h3><p>Turn clinical data into insights with Python, R, and Excel.</p></div>
+                    <div class="card"><i class="fas fa-brain"></i><h3>Medical Machine Learning</h3><p>Build AI models for disease prediction and imaging analysis.</p></div>
+                    <div class="card"><i class="fas fa-stethoscope"></i><h3>Advanced AI Diagnostics</h3><p>Leverage AI to interpret lab results, scans, and genomic data.</p></div>
+                    <div class="card"><i class="fas fa-laptop-medical"></i><h3>Medical Tools & Tech</h3><p>Hands-on training for modern medical systems.</p></div>
                 </div>
             </div>
         </div>
-
-        <!-- Slide 3: Content Left / Image Right -->
         <div class="slide slide-3">
             <div class="slide-content">
                 <div class="text-content">
-                    <h2>Teaching Technology, 
-                        Empowering People,
-                        Transforming Nations.  </h2>
-                    <p>At Msaratech, we strive to bridge the gap between traditional medical education and the rapidly evolving technological landscape, creating a generation of clinicians who are not only healers but also innovators. By democratizing access to practical, industry-aligned tech education, we aim to transform healthcare delivery—making it smarter, faster, and more accessible for all. Together, we’re building a world where technology and medicine unite to save lives and shape the future of global healthcare.
-
-                    </p>
+                    <h2>Teaching Technology, Empowering People, Transforming Nations.</h2>
+                    <p>At Msaratech, we strive to bridge the gap between traditional medical education and the rapidly evolving technological landscape, creating a generation of clinicians who are not only healers but also innovators.</p>
                 </div>
                 <div class="image-container">
-                    <img src="hero_s3.png" alt="Slide 3">
+                    <img src="hero_s3.png" alt="Innovators in Medicine">
                 </div>
             </div>
         </div>
-
-        <!-- Slider Controls -->
         <div class="slider-controls">
-            <button class="prev-btn">
-                <i class="fas fa-chevron-left"></i>
-            </button>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
             <div class="pagination-dots"></div>
-            <button class="next-btn">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
     </div>
-
-    <section class="partners-section">
+    <section id="market-gap" class="market-gap-section">
         <div class="container">
-            <h2 class="section-title-lol">Our Trusted Partners</h2>
-            <p class="section-subtitle">Msaratech Is Collaborating with... </p>
-            
-            <div class="partners-grid">
-                <!-- Partner 1 -->
-                <div class="partner-logo">
-                    <img src="aws-logo.png" alt="Partner Company 1" loading="lazy">
-                </div>
-                
-                <!-- Partner 2 -->
-                <div class="partner-logo">
-                    <img src="ALX_V_LOGO.png" alt="Partner Company 2" loading="lazy">
-                </div>
-                
-                <!-- Add more partners as needed -->
+            <h2 class="section-title">The Skills You Need, The Career You Deserve</h2>
+            <div class="gap-grid">
+                <div class="gap-item"><i class="fas fa-layer-group"></i><h3>Bridge Your Knowledge Gap</h3><p>Connect your traditional medical studies with the technology that is actively transforming your profession.</p></div>
+                <div class="gap-item"><i class="fas fa-bullseye"></i><h3>Meet Market Demands</h3><p>Meet the growing demand from Egyptian healthcare institutions for digitally-skilled, future-ready graduates.</p></div>
+                <div class="gap-item"><i class="fas fa-chart-line"></i><h3>Gain a Career Advantage</h3><p>Stand out from your peers with certified, practical training in MedTech that employers are searching for.</p></div>
             </div>
         </div>
     </section>
-
+    <section id="curriculum" class="curriculum-section">
+        <div class="container">
+            <h2 class="section-title">Find Your Path to MedTech Excellence</h2>
+            <p class="section-subtitle">Our curriculum is built for every level, from beginner to specialist.</p>
+            <div class="tracks-container">
+                <div class="track-box"><div class="track-header"><i class="fas fa-lightbulb"></i><h3>Technology Fundamentals</h3></div><p>New to tech? Start here to demystify AI, data, and the digital tools being used in healthcare today.</p><a href="programs.html#fundamentals" class="cta-button-track">Explore Fundamentals</a></div>
+                <div class="track-box"><div class="track-header"><i class="fas fa-tools"></i><h3>Applied Technology</h3></div><p>Ready for practical skills? Learn data analysis, Python, and automation for real-world medical applications.</p><a href="programs.html#applied" class="cta-button-track">View Applied Courses</a></div>
+                <div class="track-box"><div class="track-header"><i class="fas fa-star"></i><h3>Technological Specialization</h3></div><p>Want to become an expert? Dive deep into AI diagnostics, building healthcare solutions, and advanced topics.</p><a href="programs.html#specialization" class="cta-button-track">See Specializations</a></div>
+            </div>
+        </div>
+    </section>
     <section id="about" class="about-section">
         <div class="about-container">
-            <!-- Text Content (Left Side) -->
             <div class="about-content">
-                <h2 class="section-title">About Msaratech</h2>
-                <p class="highlight-text">Creating The Next Medical Tech Leaders</p>
-                
+                <h2 class="section-title">The <span>Msaratech</span> Method</h2>
+                <p class="highlight-text">A Smarter Way to Learn Medical Technology</p>
                 <div class="about-text">
-                    <p>
-                        Msaratech is an innovative educational platform designed to empower students in medical schools with essential digital skills—particularly in artificial intelligence, data analytics, and modern automation tools. By bridging the gap between modern technology and traditional oriented medical studies in Egypt, Msaratech will be at the forefront of the digital medical transformation in Egypt, starting with the roots of the field, which are medical students.
-                        <br>
-                        We focus on providing a unique learning experience for students that combines academic learning in the various technical branches required for medical practice with hands-on experience on enhanced projects specifically designed for students, giving them the experience they need for the job market in that field. In addition to developing and implementing Ai Teaching Assistant to  enhance the educational Experiences. By bridging the gap between technology and traditional fields such as medicine, law, and business, Msaratech offers a hybrid learning experience that combines self-paced recorded courses with live, hands-on sessions tailored to real-world professional challenges.
-                        <br>
-                        Msaratech's flexible business model—ranging from individual course purchases to corporate training solutions—positions it as a go-to platform for non-tech professionals seeking career-relevant tech education in the MENA region and beyond.
-                    </p>
-    
-                    
-                    <button class="cta-button">Explore Our Programs</button>
+                    <p>We've designed a unique learning experience that combines the flexibility of online learning with the rigor of expert-led training. Our hybrid model ensures you not only understand the concepts but can apply them in a clinical context.</p>
+                    <ul class="method-list">
+                        <li><i class="fas fa-vial"></i><div class="method-text"><strong>Specialized Content:</strong><span>Courses designed for medical students, not coders.</span></div></li>
+                        <li><i class="fas fa-robot"></i><div class="method-text"><strong>AI-Powered Learning:</strong><span>Your personal AI tutor provides guidance and keeps you on track.</span></div></li>
+                        <li><i class="fas fa-chalkboard-teacher"></i><div class="method-text"><strong>Expert Instructors:</strong><span>Learn from top-tier professionals working at the intersection of medicine and tech.</span></div></li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- Photo Gallery (Right Side) -->
             <div class="about-gallery">
                 <div class="gallery-grid">
-                    <div class="gallery-item main-image">
-                        <img src="gal_3.jpg" alt="Students learning in classroom">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gal_2.jpg" alt="AI laboratory">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gal_1.jpg" alt="Graduation ceremony">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="gal_4.avif" alt="Students coding">
-                    </div>
+                    <div class="gallery-item main-image"><img src="gal_3.jpg" alt="Students learning"></div>
+                    <div class="gallery-item"><img src="gal_2.jpg" alt="AI laboratory"></div>
+                    <div class="gallery-item"><img src="gal_1.jpg" alt="Graduation ceremony"></div>
+                    <div class="gallery-item"><img src="gal_4.avif" alt="Students coding"></div>
                 </div>
             </div>
         </div>
     </section>
-
-<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-</body>
-
-<footer id="contact" class="site-footer">
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="section-title">Our Trusted Partners</h2>
+            <p class="section-subtitle">Msaratech Is Collaborating with...</p>
+            <div class="partners-grid">
+                <div class="partner-logo"><img src="aws-logo.png" alt="AWS Partner Logo" loading="lazy"></div>
+                <div class="partner-logo"><img src="ALX_V_LOGO.png" alt="ALX Partner Logo" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact" class="site-footer">
         <div class="footer-container">
-            <!-- Left Column - Contact Form -->
-            <div class="footer-column form-column">
-                <h3>Send Inquiry</h3>
-                <div class="form-wrapper">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXP9lsS6EV3l54CboDnG8PK3ywzifqasr24tjzuTzrjgyS-g/viewform?embedded=true" 
-                            width="100%" 
-                            height="100%" 
-                            frameborder="0" 
-                            marginheight="0" 
-                            marginwidth="0">
-                        Loading…
-                    </iframe>
+            <div class="footer-column">
+                <div class="logo">
+                    <a href="#top"><img src="logo_h.png" alt="Msaratech Logo"></a>
                 </div>
-            </div>
-
-            <!-- Right Column - Social Media -->
-            <div class="footer-column social-column">
-                <h3>Connect With Us</h3>
-                <p>
-                    Phone: +201556264488 <br>
-                    Email: elfeky@msaratech.com <br>
+                <p class="footer-about">
+                    The first educational platform in Egypt & the MENA region specialized in empowering medical students and graduates with the tech skills of the future.
                 </p>
-                <br>
-                <div class="social-icons">
-                    <a href="https://wa.me/+201556264488" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/company/msaratech" class="social-icon linkedin" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                        <span>LinkedIn</span>
-                    </a>
-                    
-                    <a href="mailto:elfeky@msaratech.com" class="social-icon email" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email Us</span>
-                    </a>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#curriculum">Our Curriculum</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3 class="footer-title">Connect With Us</h3>
+                <ul class="footer-contact-info">
+                    <li><i class="fas fa-phone"></i> <span>+201556264488</span></li>
+                    <li><i class="fas fa-envelope"></i> <span>elfeky@msaratech.com</span></li>
+                </ul>
+                <div class="footer-social-icons">
+                    <a href="https://wa.me/+201556264488" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/company/msaratech" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
 
-        <!-- Copyright -->
+            <div class="footer-column">
+                <h3 class="footer-title">Send An Inquiry</h3>
+                <form class="footer-form" name="inquiry" method="POST" data-netlify="true">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="cta-button">Send</button>
+                </form>
+            </div>
+        </div>
         <div class="copyright">
-            <p>2025 &copy; <span id="year"></span> MSARATECH. All Rights Reserved.</p>
+            <p>&copy; 2025 MSARATECH. All Rights Reserved.</p>
         </div>
-</footer>
-
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
