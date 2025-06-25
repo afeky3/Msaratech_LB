@@ -1,30 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
-    const loginBtn = document.querySelector('.login-button');
+    
+    // MODIFICATION: Select the container of the buttons instead of just one button
+    const navButtons = document.querySelector('.nav-buttons');
 
     hamburger.addEventListener('click', function() {
         navMenu.classList.toggle('active');
         
-        // Clone and show login button in mobile menu
+        // Clone and show login/signup buttons in mobile menu
         if (navMenu.classList.contains('active')) {
-            const mobileLoginBtn = loginBtn.cloneNode(true);
-            mobileLoginBtn.classList.add('mobile');
-            if (!document.querySelector('.login-button.mobile')) {
-                navMenu.appendChild(mobileLoginBtn);
-            }
-        } else {
-            const mobileBtn = document.querySelector('.login-button.mobile');
-            if (mobileBtn) {
-                mobileBtn.remove();
+            // Check if the buttons are already there to avoid duplicates
+            if (!navMenu.querySelector('.nav-buttons')) {
+                const mobileNavButtons = navButtons.cloneNode(true);
+                navMenu.appendChild(mobileNavButtons);
             }
         }
     });
-    
 });
 
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return; // Stop if no slider exists
+
     const dotsContainer = document.querySelector('.pagination-dots');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
@@ -38,7 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const dot = document.createElement('div');
         dot.classList.add('dot');
         if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+            resetAutoSlide(); // Reset timer when a dot is clicked
+        });
         dotsContainer.appendChild(dot);
     });
 
@@ -46,27 +47,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to show a specific slide
     function goToSlide(slideIndex) {
+        // Ensure slideIndex is valid
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        } else if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+
         slides.forEach((slide, index) => {
             slide.classList.toggle('active', index === slideIndex);
-            dots[index].classList.toggle('active', index === slideIndex);
         });
+        if(dots.length > 0) {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === slideIndex);
+            });
+        }
         currentSlide = slideIndex;
     }
 
     // Next slide function
     function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        goToSlide(currentSlide);
+        goToSlide(currentSlide + 1);
     }
 
     // Previous slide function
     function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        goToSlide(currentSlide);
+        goToSlide(currentSlide - 1);
     }
 
     // Auto slide functionality
     function startAutoSlide() {
+        // Prevent multiple intervals from running
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
         autoSlideInterval = setInterval(nextSlide, slideDuration);
     }
 
@@ -74,30 +86,38 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInterval(autoSlideInterval);
         startAutoSlide();
     }
-
-    function pauseAutoSlide() {
-        if (autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = null; // Clear the reference
-        }
-    }
+    
     // Pause on hover
-    slider.onmouseenter = pauseAutoSlide;
-    slider.onmouseleave = startAutoSlide;
+    if (slider) {
+        slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        slider.addEventListener('mouseleave', startAutoSlide);
+    }
 
     // Button events
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+    }
 
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+    }
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') nextSlide();
-        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+            resetAutoSlide();
+        }
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+            resetAutoSlide();
+        }
     });
 
     // Initialize
