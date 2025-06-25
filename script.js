@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.hero-slider');
     let currentSlide = 0;
     let autoSlideInterval;
-    const slideDuration = 5000; // 5 seconds
+    const slideDuration = 10000; // 10 seconds
 
     // Create dots for each slide
     slides.forEach((_, index) => {
